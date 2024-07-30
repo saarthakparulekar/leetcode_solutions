@@ -10,3 +10,11 @@ var checkString = function(s) {
     }
     return true;
 };
+//Shortest but not fastest
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var checkString = function(s) {
+    return !s.includes('ba');
+};
