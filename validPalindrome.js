@@ -1,3 +1,22 @@
+//NEW SOLUTION BEATS 80% AND SOLVED ON OWN
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    let pal = s.replace(/[^a-zA-Z0-9]/g,'').toLowerCase();
+    let i = 0;
+    let j = pal.length-1;
+    while(i < j){
+        if(pal[i] != pal[j]){
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+};
+//OLD SOLUTION
 /**
  * @param {string} s
  * @return {boolean}
