@@ -22,3 +22,23 @@ var longestConsecutive = function(nums) {
     }
     return highestSeq;
 };
+
+//Without Sorting
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var longestConsecutive = function(nums) {
+    let unq = new Set(nums);
+    let longSeq = 0;
+    for(let num of nums){
+        if(!unq.has(num-1)){
+            let seq = 1;
+            while(unq.has(num+seq)){
+                seq++;
+            }
+            longSeq = Math.max(longSeq,seq);
+        }
+    }
+    return longSeq;
+};
