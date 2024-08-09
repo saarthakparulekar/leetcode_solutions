@@ -1,3 +1,31 @@
+//Solved on own, better runtime
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+    let par = {
+        '(' : ')',
+        '[' : ']',
+        '{' : '}',
+    }
+    
+    let stack = [];
+    for(let x of s){
+        let open = '({[';
+        if(open.includes(x)){
+            stack.push(x);
+        }else{
+            let temp = stack.pop();
+            if(par[temp] != x){
+                return false;
+            } 
+        }
+    }
+    return (stack.length == 0);
+
+};
+
 /**
  * @param {string} s
  * @return {boolean}
