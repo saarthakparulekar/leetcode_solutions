@@ -1,3 +1,5 @@
+//First Transpose (row -> col, col -> row)
+//Then reverse the row
 /**
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
